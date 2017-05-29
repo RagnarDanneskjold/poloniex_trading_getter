@@ -41,7 +41,6 @@ def create_trade_data():
         one_data = [] #the trade data for one chunk
         try:
             trade_history = polo.marketTradeHist(start = sample_start, end = sample_end)
-            trade_current = polo.marketTradeHist(start = label_time - 20000, end = label_time)[0]
 
             rate = []
             trade_times = []
@@ -153,5 +152,4 @@ def create_trade_data():
     print("Finished")
     print("")
     trade_features = np.array(trade_features)
-    trade_labels = np.array(trade_labels)
-    return trade_features, trade_labels
+    return trade_features
