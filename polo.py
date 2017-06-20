@@ -193,3 +193,13 @@ trade_features, trade_labels = create_trade_data()
 
 print(trade_features.shape)
 print(trade_labels.shape)
+
+feature_names = ['btc_xmr_buys', 'btc_xmr_bought', 'btc_xmr_sells', 'btc_xmr_sold', 'xmr_dash_buys', 'xmr_dash_bought',
+                 'xmr_dash_sells', 'xmr_dash_sold', 'xmr_ltc_buys', 'xmr_ltc_bought', 'xmr_ltc_sells', 'xmr_ltc_sold',
+                 'rate_percent_change', 'rate_mean', 'rate_std', 'btc_rate_percent_change', 'btc_rate_mean', 'btc_rate_std',
+                 'btc_xmr_vol', 'xmr_dash_vol', 'xmr_ltc_vol']
+
+label_names = ['percent_change']
+
+trade_features_df = pd.DataFrame(trade_features, columns = feature_names)
+trade_labels_df = pd.DataFrame(trade_labels, columns = label_names)
